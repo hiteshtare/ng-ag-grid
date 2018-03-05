@@ -1,0 +1,21 @@
+<!-- <div style="display: inline-block;width: 100%">
+  <button (click)="toggleSelection()">Toggle Selection</button>
+</div> -->
+<!-- <div style="display: inline-block;width: 100%">
+  <div *ngIf="selectedRowsCount === 1" style="float: left">
+    <b>
+      <i>Single row selected</i>
+    </b>
+  </div>
+  <div *ngIf="selectedRowsCount > 1" style="float: left">
+    <b>
+      <i>Multiple rows selected</i>
+    </b>
+  </div>
+</div> -->
+<div id="grid-wrapper" style="height: 100%;width: 100%;">
+  <ag-grid-angular style="width: 100%; height: 1000px;" class="ag-fresh" [gridOptions]="gridOptions" [getRowHeight]="getRowHeight"
+    [enableRangeSelection]="true" [fullWidthCellRendererFramework]="getFullWidthCellRenderer()" [isFullWidthCell]="isFullWidthCell"
+    (filterModified)="onFilterModified()" enableSorting enableColResize enableFilter (selectionChanged)="onSelectionChanged($event)"
+    [rowSelection]="rowSelection" (gridReady)="onGridReady($event)" (gridSizeChanged)="onGridSizeChanged($event)"></ag-grid-angular>
+</div>
